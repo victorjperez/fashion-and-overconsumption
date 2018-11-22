@@ -11,6 +11,12 @@ import {
   waveAnimation
 } from "../styles/animations";
 
+export const HeaderNav = styled.header`
+  ${tw("flex flex-row items-center justify-between w-1/3 h-full opacity-75 absolute")};
+  color: white;
+  top: -420px;
+`;
+
 export const Divider = styled(ParallaxLayer)`
   ${tw("absolute w-full h-full")};
   background: ${props => props.bg};
@@ -30,7 +36,7 @@ export const Content = styled(ParallaxLayer)`
 
 export const SupplementaryInfo = styled.div`
   ${tw(
-    "text-white font-sans text-lg shadow-lg max-w-lg rounded-lg px-8 py-8 md:px-10 md:py-10 overflow-hidden shadow-lg m-4"
+    "text-white opacity-80 font-sans tracking-wide text-lg md:text-xl shadow-lg max-w-lg rounded-lg px-8 py-8 md:px-10 md:py-10 overflow-hidden shadow-lg m-4"
   )};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -40,11 +46,16 @@ export const NumImg = styled.img`
   ${tw("text-center rounded-full w-64 xl:w-96 shadow-lg h-auto")};
   margin: 0 auto;
 `;
+
+export const NavImg = styled.img`
+  ${tw("text-center rounded-full w-8 xl:w-10 shadow-lg h-auto")};
+  margin: 0 auto;
+`;
 export const Inner = styled.div`
-  ${tw("flex flex-col items-center w-full xxl:w-2/3 text-center lg:text-left")};
+  ${tw("flex flex-col justify-between items-center w-full xxl:w-3/5 text-center lg:text-left")};
 `;
 export const ArtifactContainer = styled.div`
-  ${tw("flex flex-row items-center justify-center w-full h-full")};
+  ${tw("flex flex-row items-start justify-center w-full h-full")};
 `;
 export const BigTitle = styled.h1`
   ${tw(
@@ -91,22 +102,23 @@ export const InnerWave = styled.div`
 
 export const Footer = styled.footer`
   ${tw(
-    "text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg"
+    "text-center text-black absolute pin-b p-6 font-sans text-md lg:text-lg"
   )};
   a {
-    color: #e07628;
+    color: #FFFFFF;
     text-decoration: none;
   }
 `;
 export const BigImage = styled.img`
-  ${tw("shadow-lg max-w-sm rounded-lg overflow-hidden shadow-lg m-4")};
+  ${tw("shadow-lg rounded-lg  shadow-lg m-4")};
   height: ${props => props.height};
   width: ${props => props.width};
+  image-orientation: from-image;
 `;
 export const NavButton = styled.a`
   ${tw(
     "text-center font-sans block border border-blue text-lg rounded py-2 px-4 hover:bg-black text-white"
   )};
-  background: #978874;
+  background-color: ${props => props.color};
   text-decoration: none;
 `;

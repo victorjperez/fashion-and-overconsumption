@@ -1,5 +1,6 @@
 /* global tw */
 import React from "react";
+import { Link } from "gatsby"
 import styled from "react-emotion";
 import { Parallax, ParallaxLayer } from "react-spring/dist/addons";
 import "typeface-cantata-one";
@@ -17,15 +18,22 @@ import {
 } from "../styles/animations";
 import { hidden } from "../styles/utils";
 import { colors } from "../../tailwind";
+
 import one from "../images/one.svg";
-import youcannotsit from "../images/water_infographic.jpg";
+import two from "../images/two.svg";
+import three from "../images/three.svg";
+import four from "../images/four.svg";
+
+import waterinfographic from "../images/water_info.jpg";
 import "../styles/global";
 import {
+  HeaderNav,
   Divider,
   DividerMiddle,
   Content,
   SupplementaryInfo,
   NumImg,
+  NavImg,
   Inner,
   ArtifactContainer,
   BigTitle,
@@ -37,51 +45,154 @@ import {
   BigImage,
   NavButton
 } from "../styles/pagecomps";
+
+//Color Pallet - ANNA ZBOROWSKA BY AMEDEO MODIGLIANI
+const colorPrimary = "#7E2F28";
+const colorSecondary = "#D58E40";
+const colorsArtifact = ["#202938", "#1D2025"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={6.2}>
-      <Content speed={0.4} offset={0.1}>
+    <Parallax pages={5.22}>
+      <Content speed={0.4} offset={0} factor={1}>
         <Inner>
-          <NumImg src={one} alt="I" />
-          <BigTitle>HOW CLOTHES ARE MADE</BigTitle>
+          <HeaderNav>
+            <Link to="/"><NavImg src={one} alt="I" /></Link>ー
+            <Link to="/pagetwo/"><NavImg src={two} alt="II" /></Link>ー
+            <Link to="/pagethree/"><NavImg src={three} alt="III" /></Link>ー
+            <Link to="/pagefour/"><NavImg src={four} alt="IV" /></Link>
+          </HeaderNav>
+          <NumImg src={two} alt="II" />
+          <BigTitle>THE COST OF CLOTHES</BigTitle>
           <Subtitle>
             What is the true cost of what you wear? How many resources go into a
             peice of clothing? How are clothes manufactured?
           </Subtitle>
         </Inner>
       </Content>
+      <DividerMiddle
+        bg={`linear-gradient(to right, ${colorSecondary} 0%, ${colorPrimary}  100%)`}
+        speed={-0.2}
+        offset={2}
+        factor={2}
+      />
+      <Content speed={0.4} offset={1.6}>
+        <Inner>
+          <Title>The Denim Manufacturing Process (At a Glance)</Title>
+          <SupplementaryInfo color={colorsArtifact[0]}>
+            When you look at a peice of clothing, you don't necissarily see all
+            that time and effort that went into it. Jeans specifically have been
+            an American staple for years, and many people own at least two or three
+            pairs. How high is the cost for each pair of jeans?
+          </SupplementaryInfo>
+          <BigImage height="497px" width="861px" src={waterinfographic} />
+          <ArtifactContainer>
+            <ArtifactNoMedia
+              name="It All Starts With Water"
+              color={colorsArtifact[0]}
+              more="https://goodonyou.eco/fashion-and-water-the-thirsty-industry/"
+            >
+              You might not think about it, but the outfit you're wearing right now
+              might have taken thousands of gallons to produce. Growing the cotton alone
+              for a pair of jeans takes approximately <b>1,500</b> gallons of water. This
+              is in addition to the washing and detailing that goes into it.
+            </ArtifactNoMedia>
+            <ArtifactVideo
+              name="An Ecologically and Human Expensive Process"
+              color={colorsArtifact[0]}
+              embedd="https://www.youtube.com/embed/rdWa7MYNHOk"
+            >
+              Once a pair of jeans are manufactured, the process doesn't stop there.
+              Even more water is used in making your jeans looked worn in. In addition,
+              harmful chemicals are used which are hazardous to both the enviorment and 
+              workers' health.
+          </ArtifactVideo>
+          </ArtifactContainer>
+          <ArtifactNoMedia
+            name="An In-Depth Look at Denim Wash"
+            color={colorsArtifact[0]}
+            more="https://www.coats.com/Guidance/Working-with-Denim-Wash"
+          >
+            The are many different washes and variations to denim, each with their own 
+            costs associated with them. This brochure takes a deeper look at each of the 
+            processes and the drawbacks associated with them. 
+          </ArtifactNoMedia>
+          <SupplementaryInfo color={colorsArtifact[0]}>
+            Of course, that isn't even the half of what goes into making a pair of jeans. 
+            There's the weaving of the actual denim material, and the construction of the 
+            jeans to take into account. </SupplementaryInfo>
+        </Inner>
+      </Content>
       <Divider
-        bg="#23262b"
+        bg={colorsArtifact[0]}  
         clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
         speed={0.2}
         offset={3}
-      />
-      <Content speed={0.4} offset={1}>
+      />  
+      <Content speed={0.4} offset={3.3}>
         <Inner>
-          <Title>The Denim Manufacturing Process</Title>
-          <SupplementaryInfo color="slategrey">
-            When you look at a peice of clothing, you don't necissarily see all
-            that time and effort that went into it. Jeans are a good example of
-            clothing with a high ecological and work cost.
+          <Title>The Finanical Cost of Clothing</Title>
+          <SupplementaryInfo color={colorsArtifact[1]}>
+            Now that you know a little about the manufacturing process, what else do you think
+            goes into the tag price of an article of clothing?
           </SupplementaryInfo>
-          <ArtifactContainer>
-            <BigImage height="185px" width="320px" src={youcannotsit} />
-            <ArtifactNoMedia
-              name="The History of the Fashion Cycle"
-              color="slategrey"
-              more="http://vestoj.com/keywords-in-defining-dress-the-fashion-cycle/"
+            <ArtifactVideo
+              name="Why Are Clothes So Expensive?"
+              color={colorsArtifact[1]}
+              embedd="https://www.youtube.com/embed/EihI7oApeuw"
             >
-              The fashion cycle follows a basic model: higher social classes
-              dictate what is fashionable, and lower social classes emulate it
-              until it is not. This was first introduced by Thorstein Veblen in
-              1899 in the text
-              <i>The Theory of the Leisure Class</i>
-            </ArtifactNoMedia>
+              To many people, an %80 sweater is seen as an absurd waste of money. Why pay that 
+              much when you can get one for $20 at H&M? Here's why you shouldn't scoff at high prices.
+          </ArtifactVideo>
+          <ArtifactContainer>
+            <ArtifactNoMedia
+              name="The Cost of Runway Shows"
+              color={colorsArtifact[1]}
+              more="https://www.businessinsider.com/how-much-do-fashion-shows-cost-2013-9"
+            >
+              While runway shows may seem like an unnecessary expenditure, these costly events
+              are important advertising for brands. A single show at New York Fashion Week can cost
+              around <b>$460,000</b>.
+          </ArtifactNoMedia>
+            <ArtifactVideo
+              name="Designing at a Glance"
+              color={colorsArtifact[1]}
+              embedd="https://www.youtube.com/embed/0WVOhnq1cro"
+            >
+              We covered how clothes are manufactured, but there is so much that goes into simply
+              designing a peice of clothing. This video covers one of the numerous steps that
+              go into the design process.
+          </ArtifactVideo>
           </ArtifactContainer>
         </Inner>
       </Content>
-      <Divider fill="#23262b" speed={0.2} offset={4}>
+      <Content speed={0.4} offset={4.3}>
+        <Inner>
+          <Title>How Are Clothes So Affordable?</Title>
+          <SupplementaryInfo color={colorPrimary}>
+            Knowing all this, it's no wonder that a single garment can cost hundreds of dollars to purcahse.
+            Why is it then that you can walk into a store with $50 and come out with bags of clothing?
+          </SupplementaryInfo>
+        </Inner>
+        <Footer>
+          &copy; 2018 by Victor Perez{" "}
+          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">
+            Github Repository
+          </a>
+          .
+        </Footer>
+      </Content>
+      <Content speed={0.4} offset={4.5}>
+        <Inner>
+          <Link
+            to="/pagethree/"
+          ><NavButton color={colorPrimary}>
+            Next Page >
+             
+          </NavButton></Link>
+        </Inner>
+      </Content>
+      <Divider fill={colorSecondary} speed={0.2} offset={4.3}>
         <WaveWrapper>
           <InnerWave>
             <svg
@@ -101,74 +212,6 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <Content speed={0.4} offset={4.1}>
-        <Inner>
-          <Title>Fashion Journalism and Trendsetting</Title>
-
-          <SupplementaryInfo color="slategrey">
-            <i>
-              "One of the differences between art and fashion is that, though it
-              has relatively little effect, there still is such a thing as art
-              criticism. Fashion criticism on the other hand is nonexistent
-              because anyone who would dare to write something against a major
-              advertiser would be immediately not just fired but thrown into the
-              East River." - Glenn O’Brien, editor-at-large at Maxim
-            </i>
-          </SupplementaryInfo>
-          <ArtifactContainer>
-            <ArtifactNoMedia
-              name="The Link Between Journalism and the Fashion Industry"
-              color="slategrey"
-              more="http://vestoj.com/fashion-writing-on-fighting-the-system/"
-            >
-              Journalists and members of the fashion industry have a complicated
-              relationship. Saying the "wrong" thing about someone or something
-              you're not supposed to can result in being blacklisted from
-              private runway shows, and other industry events.
-            </ArtifactNoMedia>
-            <ArtifactNoMedia
-              name="What's Wrong With the Fashion Industry?"
-              color="slategrey"
-              more="http://vestoj.com/whats-wrong-with-the-fashion-industry-4/"
-            >
-              From an ethical standpoint, Fashion journalism has a lot of very
-              serious issues. While Instagram and other forms of social media
-              are becoming a large player in Fashion advertising, they come with
-              their own set of ethical issues as well.
-            </ArtifactNoMedia>
-          </ArtifactContainer>
-          <SupplementaryInfo color="slategrey">
-            <i>
-              "Fashion advertising and editorial complement each other. Fashion
-              is all about creating desire, and both advertisers and editors
-              want to seduce the consumer; after all, that’s our job." - Hamish
-              Bowles, American Vogue editor
-            </i>
-          </SupplementaryInfo>
-        </Inner>
-      </Content>
-      <Content speed={0.4} offset={5.2}>
-        <Inner>
-          <Title>Trends and Overconsumption</Title>
-          <SupplementaryInfo color="slategrey">
-            Understanding how fashion trends play a role in our lives is an
-            important part of reducing our overall consumption. But why is
-            buying less clothes so important?
-          </SupplementaryInfo>
-        </Inner>
-        <Footer>
-          &copy; 2018 by Victor Perez{" "}
-          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">
-            Github Repository
-          </a>
-          .
-        </Footer>
-      </Content>
-      <Content speed={0.4} offset={5.5}>
-        <Inner>
-          <NavButton href="#">Next Page ></NavButton>
-        </Inner>
-      </Content>
     </Parallax>
   </React.Fragment>
 );
