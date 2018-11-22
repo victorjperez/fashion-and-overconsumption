@@ -1,5 +1,16 @@
 {
   "main.js": "render-page.js",
   "main.js.map": "render-page.js.map",
+  "static/dress.jpg": "static/dress-49d423080bb45480fdf543d03cc9b21b.jpg",
+  "static/fastfashionwaste.jpg": "static/fastfashionwaste-0f9e96fbbaeaad34c31f3e33e0007371.jpg",
+  "static/hannah-1.jpg": "static/hannah-1-6ebb3f24f39bb628958a16066086e8f9.jpg",
+  "static/hannah-2.jpg": "static/hannah-2-67a774fd2a32a3dbe86194525fe7ece6.jpg",
+  "static/kateshoes.jpg": "static/kateshoes-24f7715edfde92f2314a576483cd629d.jpg",
+  "static/ragtrade.jpg": "static/ragtrade-4b6f66193c46b2af68b079dc8f92e06f.jpg",
+  "static/sashiko.jpg": "static/sashiko-a92954c64102ec51c6826d41f22c2e85.jpg",
+  "static/vivienne-1.jpeg": "static/vivienne-1-187f888a313759050c9f4266c648bd13.jpeg",
+  "static/vivienne-2.jpeg": "static/vivienne-2-18397b69569ec3d8660bdc9f5c8a58d0.jpeg",
+  "static/vivienne-3.jpeg": "static/vivienne-3-21cd589d02aa0349c172fe3c59bf3f95.jpeg",
+  "static/water_info.jpg": "static/water_info-b7cc65191f2f04ac66b86a7239d3a2e6.jpg",
   "static/you-cannot-sit.png": "static/you-cannot-sit-944144c33c7b8076736fa7a83153792f.png"
 }
