@@ -55,11 +55,11 @@ export const Inner = styled.div`
   ${tw("flex flex-col justify-between items-center w-full xxl:w-3/5 text-center lg:text-left")};
 `;
 export const ArtifactContainer = styled.div`
-  ${tw("flex flex-row items-start justify-center w-full h-full")};
+  ${tw("flex flex-row flex-no-wrap items-start overflow-x-auto lg:justify-center w-full h-full")};
 `;
 export const BigTitle = styled.h1`
   ${tw(
-    "text-center text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide"
+    "text-center text-3xl md:text-6xl font-serif text-white mb-6 tracking-wide"
   )};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
@@ -102,8 +102,9 @@ export const InnerWave = styled.div`
 
 export const Footer = styled.footer`
   ${tw(
-    "text-center text-black absolute pin-b p-6 font-sans text-md lg:text-lg"
+    "text-center text-black absolute p-6 font-sans text-sm lg:text-lg"
   )};
+  bottom: 250px;
   a {
     color: #FFFFFF;
     text-decoration: none;
@@ -117,8 +118,9 @@ export const BigImage = styled.img`
 `;
 export const NavButton = styled.a`
   ${tw(
-    "text-center font-sans block border border-blue text-lg rounded py-2 px-4 hover:bg-black text-white"
+    "text-center font-sans pin-b block border border-blue text-lg rounded py-2 px-4 hover:bg-black text-white"
   )};
   background-color: ${props => props.color};
   text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;

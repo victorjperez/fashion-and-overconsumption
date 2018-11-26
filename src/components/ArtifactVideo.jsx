@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import styled from "react-emotion";
 
 const Frame = styled.div`
-  ${tw("shadow-lg max-w-sm rounded-lg overflow-hidden shadow-lg m-4")};
+  ${tw("shadow-lg max-w-xs md:max-w-sm  rounded-lg overflow-hidden shadow-lg m-4")};
   background: ${props => props.color};
+  flex: 0 0 auto; 
 `;
 const Nameplate = styled.div`
   width: 100%;

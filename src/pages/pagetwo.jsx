@@ -53,7 +53,29 @@ const colorsArtifact = ["#202938", "#1D2025"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={5.22}>
+    <Parallax pages={5.5}>
+      <Divider speed={0.1} offset={0} factor={1}>
+        <UpDown>
+          <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="85%" top="75%" />
+          <SVG icon="dress" width={8} fill={colorsArtifact[0]} left="70%" top="20%" />
+          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
+          <SVG icon="shirt" className={hidden} width={24} fill={colorsArtifact[0]} left="17%" top="60%" />
+        </UpDown>
+        <UpDownWide>
+          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="20%" top="90%" />
+          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="90%" top="30%" />
+          <SVG icon="shirt" width={16} fill={colorsArtifact[0]} left="70%" top="90%" />
+          <SVG icon="dressShirt" className={hidden} width={16} fill={colorsArtifact[1]} left="18%" top="75%" />
+          <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="75%" top="10%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[0]} left="45%" top="10%" />
+        </UpDownWide>
+        <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="4%" top="20%" />
+        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="80%" top="60%" />
+        <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="10%" top="10%" />
+        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="29%" top="26%" />
+        <SVG icon="boot" width={16} fill={colorsArtifact[1]} left="75%" top="30%" />
+        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+      </Divider>
       <Content speed={0.4} offset={0} factor={1}>
         <Inner>
           <HeaderNav>
@@ -76,7 +98,26 @@ const Index = () => (
         offset={2}
         factor={2}
       />
-      <Content speed={0.4} offset={1.6}>
+      <Divider speed={0.1} offset={1.8}>
+        <UpDown>
+          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[0]} left="50%" top="75%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
+          <SVG icon="dressShirt" width={8} fill={colorsArtifact[0]} left="25%" top="5%" />
+          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+        </UpDown>
+        <UpDownWide>
+          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="5%" top="80%" />
+          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
+          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+        </UpDownWide>
+        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
+        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="70%" top="60%" />
+        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
+        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="20%" top="30%" />
+        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+      </Divider>
+      <Content speed={0.4} offset={1.8}>
         <Inner>
           <Title>The Denim Manufacturing Process (At a Glance)</Title>
           <SupplementaryInfo color={colorsArtifact[0]}>
@@ -85,7 +126,7 @@ const Index = () => (
             an American staple for years, and many people own at least two or three
             pairs. How high is the cost for each pair of jeans?
           </SupplementaryInfo>
-          <BigImage height="497px" width="861px" src={waterinfographic} />
+          <BigImage height="100%" width="100%" src={waterinfographic} />
           <ArtifactContainer>
             <ArtifactNoMedia
               name="It All Starts With Water"
@@ -128,8 +169,24 @@ const Index = () => (
         clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
         speed={0.2}
         offset={3}
-      />  
-      <Content speed={0.4} offset={3.3}>
+      /> 
+      <Divider speed={0.1} offset={3.6}>
+        <UpDown>
+          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="70%" top="20%" />
+          <SVG icon="dressShirt" width={8} stroke={colorSecondary} left="25%" top="5%" />
+        </UpDown>
+        <UpDownWide>
+          <SVG icon="dressShirt" width={12} stroke={colorSecondary} left="95%" top="50%" />
+          <SVG icon="shirt" width={6} fill={colorPrimary} left="85%" top="15%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="45%" top="10%" />
+        </UpDownWide>
+        <SVG icon="shirt" width={6} fill={colorPrimary} left="4%" top="20%" />
+        <SVG icon="shirt" width={12} fill={colorPrimary} left="70%" top="60%" />
+        <SVG icon="shorts" width={12} fill={colorPrimary} left="20%" top="30%" />
+        <SVG icon="boot" width={8} stroke={colorSecondary} left="80%" top="70%" />
+      </Divider>
+ 
+      <Content speed={0.4} offset={3.6}>
         <Inner>
           <Title>The Finanical Cost of Clothing</Title>
           <SupplementaryInfo color={colorsArtifact[1]}>
@@ -166,7 +223,26 @@ const Index = () => (
           </ArtifactContainer>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={4.3}>
+      <Divider speed={0.1} offset={4.65}>
+        <UpDown>
+          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[1]} left="50%" top="75%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
+          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
+          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+        </UpDown>
+        <UpDownWide>
+          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[1]} left="5%" top="80%" />
+          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
+          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
+          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+        </UpDownWide>
+        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
+        <SVG icon="shirt" width={12} fill={colorsArtifact[1]} left="70%" top="60%" />
+        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
+        <SVG icon="shorts" width={12} fill={colorsArtifact[1]} left="20%" top="30%" />
+        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+      </Divider>
+      <Content speed={0.4} offset={4.65}>
         <Inner>
           <Title>How Are Clothes So Affordable?</Title>
           <SupplementaryInfo color={colorPrimary}>
@@ -174,25 +250,23 @@ const Index = () => (
             Why is it then that you can walk into a store with $50 and come out with bags of clothing?
           </SupplementaryInfo>
         </Inner>
+
+      </Content>
+      <Content speed={0.4} offset={4.99}>
+        <Link
+          to="/pagethree/"
+        ><NavButton color={colorPrimary}>
+            Next Page >
+          </NavButton></Link>
         <Footer>
           &copy; 2018 by Victor Perez{" "}
-          <a href="https://github.com/LeKoArts/gatsby-starter-portfolio-cara">
+          <a href="https://github.com/victorjperez/fashionandoverconsumption">
             Github Repository
           </a>
           .
         </Footer>
       </Content>
-      <Content speed={0.4} offset={4.5}>
-        <Inner>
-          <Link
-            to="/pagethree/"
-          ><NavButton color={colorPrimary}>
-            Next Page >
-             
-          </NavButton></Link>
-        </Inner>
-      </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={4.3}>
+      <Divider fill={colorSecondary} speed={0.2} offset={4.6}>
         <WaveWrapper>
           <InnerWave>
             <svg
