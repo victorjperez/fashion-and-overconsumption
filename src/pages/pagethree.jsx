@@ -55,7 +55,7 @@ const colorsArtifact = ["#8C9355", "#465946"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={6.3}>
+    <Parallax pages={6.5}>
       <Divider speed={0.1} offset={0} factor={1}>
         <UpDown>
           <SVG
@@ -180,6 +180,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={0} factor={1}>
         <Inner>
+          <NumImg src={three} alt="III" />
           <HeaderNav>
             <Link to="/">
               <NavImg src={one} alt="I" />
@@ -197,7 +198,6 @@ const Index = () => (
               <NavImg src={four} alt="IV" />
             </Link>
           </HeaderNav>
-          <NumImg src={three} alt="III" />
           <BigTitle>FAST FASHION</BigTitle>
           <Subtitle>
             What exactly is fast fashion? How are clothes so cheap? What impact
@@ -351,7 +351,7 @@ const Index = () => (
             >
               This presentation goes into detail about how consumption has
               changed over the years, and how fast fashion managed to take hold
-              in America. It also highlights some of the enviormental concerns
+              in America. It also highlights some of the environmental concerns
               with polyester, a synthetic fiber that's non-biodegradable, and a
               component in most fast fashion garments.
             </ArtifactNoMedia>
@@ -579,9 +579,9 @@ const Index = () => (
         <Inner>
           <Title>The Ruthless Exploitation of Labor</Title>
           <SupplementaryInfo color={colorPrimary}>
-            In order to keep costs low, clothing proudction is outsourced to
-            countries with lax labour laws like Bangladesh and China. Workers in
-            these countries are paid extremly low wages, and work in horrible
+            In order to keep costs low, clothing production is outsourced to
+            countries with lax labor laws like Bangladesh and China. Workers in
+            these countries are paid extremely low wages, and work in horrible
             contradictions in order to produce cheap clothes quickly.
           </SupplementaryInfo>
           <ArtifactNoMedia
@@ -596,19 +596,12 @@ const Index = () => (
           </ArtifactNoMedia>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={5.7}>
+      <Content speed={0.4} offset={6} factor={0.05}>
         <Link to="/pagefour/">
           <NavButton color={colorPrimary}>Next Page ></NavButton>
         </Link>
-        <Footer>
-          &copy; 2018 by Victor Perez{" "}
-          <a href="https://github.com/victorjperez/fashionandoverconsumption">
-            Github Repository
-          </a>
-          .
-        </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={5.4}>
+      <Divider fill={colorSecondary} speed={0.2} offset={5.6}>
         <WaveWrapper>
           <InnerWave>
             <svg

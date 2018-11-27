@@ -187,6 +187,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={0.1} factor={1}>
         <Inner>
+          <NumImg src={four} alt="IV" />
           <HeaderNav>
             <Link to="/">
               <NavImg src={one} alt="I" />
@@ -204,7 +205,6 @@ const Index = () => (
               <NavImg src={four} alt="IV" />
             </Link>
           </HeaderNav>
-          <NumImg src={four} alt="IV" />
           <BigTitle>REDUCING YOUR FOOTPRINT</BigTitle>
           <Subtitle>
             What can you do to reduce your consumption? Is donating helpful? How

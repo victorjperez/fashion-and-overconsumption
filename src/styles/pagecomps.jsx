@@ -11,12 +11,11 @@ import {
   waveAnimation
 } from "../styles/animations";
 
-export const HeaderNav = styled.header`
+export const HeaderNav = styled.div`
   ${tw(
-    "flex flex-row items-center justify-between w-1/3 h-full opacity-75 absolute"
+    "flex flex-row items-center justify-between w-1/3 h-full mt-6 opacity-75"
   )};
   color: white;
-  top: -6%;
 `;
 
 export const Divider = styled(ParallaxLayer)`

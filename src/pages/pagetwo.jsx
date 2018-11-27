@@ -178,6 +178,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={0} factor={1}>
         <Inner>
+          <NumImg src={two} alt="II" />
           <HeaderNav>
             <Link to="/">
               <NavImg src={one} alt="I" />
@@ -195,7 +196,7 @@ const Index = () => (
               <NavImg src={four} alt="IV" />
             </Link>
           </HeaderNav>
-          <NumImg src={two} alt="II" />
+
           <BigTitle>THE COST OF CLOTHES</BigTitle>
           <Subtitle>
             What is the true cost of what you wear? How many resources go into a
@@ -341,7 +342,7 @@ const Index = () => (
               Once a pair of jeans are manufactured, the process doesn't stop
               there. Even more water is used in making your jeans looked worn
               in. In addition, harmful chemicals are used which are hazardous to
-              both the enviorment and workers' health.
+              both the environment and workers' health.
             </ArtifactVideo>
           </ArtifactContainer>
           <ArtifactNoMedia
@@ -356,8 +357,8 @@ const Index = () => (
           </ArtifactNoMedia>
           <SupplementaryInfo color={colorsArtifact[0]}>
             Of course, that isn't even the half of what goes into making a pair
-            of jeans. There's the weaving of the actual denim material, and the
-            construction of the jeans to take into account.{" "}
+            of jeans. There's the weaving of the actual denim material, the
+            construction of the jeans, and other things to consider.
           </SupplementaryInfo>
         </Inner>
       </Content>
@@ -439,7 +440,7 @@ const Index = () => (
             color={colorsArtifact[1]}
             embedd="https://www.youtube.com/embed/EihI7oApeuw"
           >
-            To many people, an %80 sweater is seen as an absurd waste of money.
+            To many people, an $80 sweater is seen as an absurd waste of money.
             Why pay that much when you can get one for $20 at H&M? Here's why
             you shouldn't scoff at high prices.
           </ArtifactVideo>
@@ -572,7 +573,7 @@ const Index = () => (
           <Title>How Are Clothes So Affordable?</Title>
           <SupplementaryInfo color={colorPrimary}>
             Knowing all this, it's no wonder that a single garment can cost
-            hundreds of dollars to purcahse. Why is it then that you can walk
+            hundreds of dollars to purchase. Why is it then that you can walk
             into a store with $50 and come out with bags of clothing?
           </SupplementaryInfo>
         </Inner>

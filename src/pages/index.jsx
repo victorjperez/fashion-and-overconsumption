@@ -339,6 +339,7 @@ const Index = () => (
       </Divider>
       <Content speed={0.4} offset={1} factor={1}>
         <Inner>
+          <NumImg src={one} alt="I" />
           <HeaderNav>
             <Link to="/">
               <NavImg src={one} alt="I" />
@@ -356,7 +357,6 @@ const Index = () => (
               <NavImg src={four} alt="IV" />
             </Link>
           </HeaderNav>
-          <NumImg src={one} alt="I" />
           <BigTitle>THE FORCES OF FASHION</BigTitle>
           <Subtitle>
             What keeps people coming back to buy more clothes? Who dictates
@@ -486,16 +486,14 @@ const Index = () => (
             color={colorsArtifact[0]}
             embedd="https://www.youtube.com/embed/awmyDjY-8e8"
           >
-            <i>The Devil Wears Prada</i> may be a saterical film about the
+            <i>The Devil Wears Prada</i> may be a satirical film about the
             fashion industry, but this iconic scene does a lot to explain the
             way high fashion trickles down to the general public. This is the
             basis of the fashion cycle that dictates what we as a society wear.
           </ArtifactVideo>
           <SupplementaryInfo color={colorsArtifact[0]}>
             When looking at runway shows, it's hard to see how any of it affects
-            what we wear every day. They're over the top, extravagent, and
-            nobody with any sense would wear half of those outfits to work or
-            class. Understanding how those shows disseminate into the general
+            what we wear every day. Understanding how those shows disseminate into the general
             public is the key to understanding the fashion cycle.
           </SupplementaryInfo>
           <ArtifactNoMedia
@@ -505,7 +503,7 @@ const Index = () => (
           >
             The fashion cycle follows a basic model: higher social classes
             dictate what is fashionable, and lower social classes emulate it
-            until it is not. This was first introduced by Thorstein Veblen in
+            until it's not. This was first introduced by Thorstein Veblen in
             1899 in the text <i>The Theory of the Leisure Class</i>
           </ArtifactNoMedia>
         </Inner>
@@ -599,9 +597,9 @@ const Index = () => (
               color={colorsArtifact[1]}
               more="http://vestoj.com/whats-wrong-with-the-fashion-industry-4/"
             >
-              From an ethical standpoint, Fashion journalism has a lot of very
+              From an ethical standpoint, fashion journalism has a lot of very
               serious issues. While Instagram and other forms of social media
-              are becoming a large player in Fashion advertising, they come with
+              are becoming a large player in fashion advertising, they come with
               their own set of ethical issues as well.
             </ArtifactNoMedia>
           </ArtifactContainer>
