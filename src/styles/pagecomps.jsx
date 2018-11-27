@@ -12,9 +12,11 @@ import {
 } from "../styles/animations";
 
 export const HeaderNav = styled.header`
-  ${tw("flex flex-row items-center justify-between w-1/3 h-full opacity-75 absolute")};
+  ${tw(
+    "flex flex-row items-center justify-between w-1/3 h-full opacity-75 absolute"
+  )};
   color: white;
-  top: -420px;
+  top: -6%;
 `;
 
 export const Divider = styled(ParallaxLayer)`
@@ -48,18 +50,25 @@ export const NumImg = styled.img`
 `;
 
 export const NavImg = styled.img`
-  ${tw("text-center rounded-full w-8 xl:w-10 shadow-lg h-auto")};
+  ${tw(
+    "text-center rounded-full w-8 xl:w-10 shadow-lg h-auto hover:opacity-50 "
+  )};
   margin: 0 auto;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;
 export const Inner = styled.div`
-  ${tw("flex flex-col justify-between items-center w-full xxl:w-3/5 text-center lg:text-left")};
+  ${tw(
+    "flex flex-col justify-between items-center w-full xxl:w-3/5 text-center lg:text-left"
+  )};
 `;
 export const ArtifactContainer = styled.div`
-  ${tw("flex flex-row flex-no-wrap items-start overflow-x-auto lg:justify-center w-full h-full")};
+  ${tw(
+    "flex flex-row flex-no-wrap items-start lg:justify-center w-full h-full"
+  )};
 `;
 export const BigTitle = styled.h1`
   ${tw(
-    "text-center text-3xl md:text-6xl font-serif text-white mb-6 tracking-wide"
+    "text-center text-3xl md:text-6xl font-serif text-white mb-6 pt-6 tracking-wide"
   )};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
@@ -101,12 +110,10 @@ export const InnerWave = styled.div`
 `;
 
 export const Footer = styled.footer`
-  ${tw(
-    "text-center text-black absolute p-6 font-sans text-sm lg:text-lg"
-  )};
-  bottom: 250px;
+  ${tw("text-center text-black absolute p-6 font-sans text-sm lg:text-lg")};
+  bottom: 35%;
   a {
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
   }
 `;

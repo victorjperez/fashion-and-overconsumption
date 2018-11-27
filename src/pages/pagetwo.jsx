@@ -1,6 +1,6 @@
 /* global tw */
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import styled from "react-emotion";
 import { Parallax, ParallaxLayer } from "react-spring/dist/addons";
 import "typeface-cantata-one";
@@ -53,36 +53,147 @@ const colorsArtifact = ["#202938", "#1D2025"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={5.5}>
+    <Parallax pages={5.75}>
       <Divider speed={0.1} offset={0} factor={1}>
         <UpDown>
-          <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="85%" top="75%" />
-          <SVG icon="dress" width={8} fill={colorsArtifact[0]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
-          <SVG icon="shirt" className={hidden} width={24} fill={colorsArtifact[0]} left="17%" top="60%" />
+          <SVG
+            icon="shorts"
+            width={6}
+            fill={colorsArtifact[0]}
+            left="85%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            width={8}
+            fill={colorsArtifact[0]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[1]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[0]}
+            left="17%"
+            top="60%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="20%" top="90%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="90%" top="30%" />
-          <SVG icon="shirt" width={16} fill={colorsArtifact[0]} left="70%" top="90%" />
-          <SVG icon="dressShirt" className={hidden} width={16} fill={colorsArtifact[1]} left="18%" top="75%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="75%" top="10%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[0]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[0]}
+            left="20%"
+            top="90%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="90%"
+            top="30%"
+          />
+          <SVG
+            icon="shirt"
+            width={16}
+            fill={colorsArtifact[0]}
+            left="70%"
+            top="90%"
+          />
+          <SVG
+            icon="dressShirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[1]}
+            left="18%"
+            top="75%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[0]}
+            left="75%"
+            top="10%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[0]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="80%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="29%" top="26%" />
-        <SVG icon="boot" width={16} fill={colorsArtifact[1]} left="75%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[0]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="80%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[0]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="29%"
+          top="26%"
+        />
+        <SVG
+          icon="boot"
+          width={16}
+          fill={colorsArtifact[1]}
+          left="75%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={0} factor={1}>
         <Inner>
           <HeaderNav>
-            <Link to="/"><NavImg src={one} alt="I" /></Link>ー
-            <Link to="/pagetwo/"><NavImg src={two} alt="II" /></Link>ー
-            <Link to="/pagethree/"><NavImg src={three} alt="III" /></Link>ー
-            <Link to="/pagefour/"><NavImg src={four} alt="IV" /></Link>
+            <Link to="/">
+              <NavImg src={one} alt="I" />
+            </Link>
+            ー
+            <Link to="/pagetwo/">
+              <NavImg src={two} alt="II" />
+            </Link>
+            ー
+            <Link to="/pagethree/">
+              <NavImg src={three} alt="III" />
+            </Link>
+            ー
+            <Link to="/pagefour/">
+              <NavImg src={four} alt="IV" />
+            </Link>
           </HeaderNav>
           <NumImg src={two} alt="II" />
           <BigTitle>THE COST OF CLOTHES</BigTitle>
@@ -100,106 +211,237 @@ const Index = () => (
       />
       <Divider speed={0.1} offset={1.8}>
         <UpDown>
-          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[0]} left="50%" top="75%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[0]} left="25%" top="5%" />
-          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+          <SVG
+            icon="shorts"
+            className={hidden}
+            width={6}
+            fill={colorsArtifact[0]}
+            left="50%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[0]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[1]}
+            left="80%"
+            top="80%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="5%" top="80%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[0]}
+            left="5%"
+            top="80%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[1]}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="70%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="20%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={1.8}>
         <Inner>
           <Title>The Denim Manufacturing Process (At a Glance)</Title>
           <SupplementaryInfo color={colorsArtifact[0]}>
-            When you look at a peice of clothing, you don't necissarily see all
+            When you look at a peice of clothing, you don't necessarily see all
             that time and effort that went into it. Jeans specifically have been
-            an American staple for years, and many people own at least two or three
-            pairs. How high is the cost for each pair of jeans?
+            an American staple for years, and many people own at least two or
+            three pairs. How high is the cost for each pair of jeans?
           </SupplementaryInfo>
-          <BigImage height="100%" width="100%" src={waterinfographic} />
+          <BigImage height="70%" width="70%" src={waterinfographic} />
           <ArtifactContainer>
             <ArtifactNoMedia
               name="It All Starts With Water"
               color={colorsArtifact[0]}
               more="https://goodonyou.eco/fashion-and-water-the-thirsty-industry/"
             >
-              You might not think about it, but the outfit you're wearing right now
-              might have taken thousands of gallons to produce. Growing the cotton alone
-              for a pair of jeans takes approximately <b>1,500</b> gallons of water. This
-              is in addition to the washing and detailing that goes into it.
+              You might not think about it, but the outfit you're wearing right
+              now might have taken thousands of gallons to produce. Growing the
+              cotton alone for a pair of jeans takes approximately <b>1,500</b>{" "}
+              gallons of water. This is in addition to the washing and detailing
+              that goes into it.
             </ArtifactNoMedia>
             <ArtifactVideo
               name="An Ecologically and Human Expensive Process"
               color={colorsArtifact[0]}
               embedd="https://www.youtube.com/embed/rdWa7MYNHOk"
             >
-              Once a pair of jeans are manufactured, the process doesn't stop there.
-              Even more water is used in making your jeans looked worn in. In addition,
-              harmful chemicals are used which are hazardous to both the enviorment and 
-              workers' health.
-          </ArtifactVideo>
+              Once a pair of jeans are manufactured, the process doesn't stop
+              there. Even more water is used in making your jeans looked worn
+              in. In addition, harmful chemicals are used which are hazardous to
+              both the enviorment and workers' health.
+            </ArtifactVideo>
           </ArtifactContainer>
           <ArtifactNoMedia
             name="An In-Depth Look at Denim Wash"
             color={colorsArtifact[0]}
             more="https://www.coats.com/Guidance/Working-with-Denim-Wash"
           >
-            The are many different washes and variations to denim, each with their own 
-            costs associated with them. This brochure takes a deeper look at each of the 
-            processes and the drawbacks associated with them. 
+            The are many different washes and variations to denim, each with
+            their own costs associated with them. This brochure takes a deeper
+            look at each of the processes and the drawbacks associated with
+            them.
           </ArtifactNoMedia>
           <SupplementaryInfo color={colorsArtifact[0]}>
-            Of course, that isn't even the half of what goes into making a pair of jeans. 
-            There's the weaving of the actual denim material, and the construction of the 
-            jeans to take into account. </SupplementaryInfo>
+            Of course, that isn't even the half of what goes into making a pair
+            of jeans. There's the weaving of the actual denim material, and the
+            construction of the jeans to take into account.{" "}
+          </SupplementaryInfo>
         </Inner>
       </Content>
       <Divider
-        bg={colorsArtifact[0]}  
+        bg={colorsArtifact[0]}
         clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
         speed={0.2}
         offset={3}
-      /> 
-      <Divider speed={0.1} offset={3.6}>
+      />
+      <Divider speed={0.1} offset={3.9}>
         <UpDown>
-          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} stroke={colorSecondary} left="25%" top="5%" />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorPrimary}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            stroke={colorSecondary}
+            left="25%"
+            top="5%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="dressShirt" width={12} stroke={colorSecondary} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorPrimary} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="45%" top="10%" />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            stroke={colorSecondary}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorPrimary}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorPrimary}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
         <SVG icon="shirt" width={6} fill={colorPrimary} left="4%" top="20%" />
         <SVG icon="shirt" width={12} fill={colorPrimary} left="70%" top="60%" />
-        <SVG icon="shorts" width={12} fill={colorPrimary} left="20%" top="30%" />
-        <SVG icon="boot" width={8} stroke={colorSecondary} left="80%" top="70%" />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorPrimary}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          stroke={colorSecondary}
+          left="80%"
+          top="70%"
+        />
       </Divider>
- 
-      <Content speed={0.4} offset={3.6}>
+
+      <Content speed={0.4} offset={3.9}>
         <Inner>
           <Title>The Finanical Cost of Clothing</Title>
           <SupplementaryInfo color={colorsArtifact[1]}>
-            Now that you know a little about the manufacturing process, what else do you think
-            goes into the tag price of an article of clothing?
+            Now that you know a little about the manufacturing process, what
+            else do you think goes into the tag price of an article of clothing?
           </SupplementaryInfo>
-            <ArtifactVideo
-              name="Why Are Clothes So Expensive?"
-              color={colorsArtifact[1]}
-              embedd="https://www.youtube.com/embed/EihI7oApeuw"
-            >
-              To many people, an %80 sweater is seen as an absurd waste of money. Why pay that 
-              much when you can get one for $20 at H&M? Here's why you shouldn't scoff at high prices.
+          <ArtifactVideo
+            name="Why Are Clothes So Expensive?"
+            color={colorsArtifact[1]}
+            embedd="https://www.youtube.com/embed/EihI7oApeuw"
+          >
+            To many people, an %80 sweater is seen as an absurd waste of money.
+            Why pay that much when you can get one for $20 at H&M? Here's why
+            you shouldn't scoff at high prices.
           </ArtifactVideo>
           <ArtifactContainer>
             <ArtifactNoMedia
@@ -207,57 +449,138 @@ const Index = () => (
               color={colorsArtifact[1]}
               more="https://www.businessinsider.com/how-much-do-fashion-shows-cost-2013-9"
             >
-              While runway shows may seem like an unnecessary expenditure, these costly events
-              are important advertising for brands. A single show at New York Fashion Week can cost
-              around <b>$460,000</b>.
-          </ArtifactNoMedia>
+              While runway shows may seem like an unnecessary expenditure, these
+              costly events are important advertising for brands. A single show
+              at New York Fashion Week can cost around <b>$460,000</b>.
+            </ArtifactNoMedia>
             <ArtifactVideo
               name="Designing at a Glance"
               color={colorsArtifact[1]}
               embedd="https://www.youtube.com/embed/0WVOhnq1cro"
             >
-              We covered how clothes are manufactured, but there is so much that goes into simply
-              designing a peice of clothing. This video covers one of the numerous steps that
-              go into the design process.
-          </ArtifactVideo>
+              We covered how clothes are manufactured, but there is so much that
+              goes into simply designing a peice of clothing. This video covers
+              one of the numerous steps that go into the design process.
+            </ArtifactVideo>
           </ArtifactContainer>
         </Inner>
       </Content>
-      <Divider speed={0.1} offset={4.65}>
+      <Divider speed={0.1} offset={4.95}>
         <UpDown>
-          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[1]} left="50%" top="75%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
-          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+          <SVG
+            icon="shorts"
+            className={hidden}
+            width={6}
+            fill={colorsArtifact[1]}
+            left="50%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[1]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[1]}
+            left="80%"
+            top="80%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[1]} left="5%" top="80%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[1]}
+            left="5%"
+            top="80%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[1]}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[1]} left="70%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[1]} left="20%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[1]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[1]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
-      <Content speed={0.4} offset={4.65}>
+      <Content speed={0.4} offset={4.95}>
         <Inner>
           <Title>How Are Clothes So Affordable?</Title>
           <SupplementaryInfo color={colorPrimary}>
-            Knowing all this, it's no wonder that a single garment can cost hundreds of dollars to purcahse.
-            Why is it then that you can walk into a store with $50 and come out with bags of clothing?
+            Knowing all this, it's no wonder that a single garment can cost
+            hundreds of dollars to purcahse. Why is it then that you can walk
+            into a store with $50 and come out with bags of clothing?
           </SupplementaryInfo>
         </Inner>
-
       </Content>
-      <Content speed={0.4} offset={4.99}>
-        <Link
-          to="/pagethree/"
-        ><NavButton color={colorPrimary}>
-            Next Page >
-          </NavButton></Link>
+      <Content speed={0.4} offset={5}>
+        <Link to="/pagethree/">
+          <NavButton color={colorPrimary}>Next Page ></NavButton>
+        </Link>
         <Footer>
           &copy; 2018 by Victor Perez{" "}
           <a href="https://github.com/victorjperez/fashionandoverconsumption">
@@ -266,7 +589,7 @@ const Index = () => (
           .
         </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={4.6}>
+      <Divider fill={colorSecondary} speed={0.2} offset={4.9}>
         <WaveWrapper>
           <InnerWave>
             <svg

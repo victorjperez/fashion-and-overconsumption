@@ -1,6 +1,6 @@
 /* global tw */
 import React from "react";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import styled from "react-emotion";
 import { Parallax, ParallaxLayer } from "react-spring/dist/addons";
 import "typeface-cantata-one";
@@ -12,13 +12,18 @@ import ArtifactNoMedia from "../components/ArtifactNoMedia";
 import ArtifactVideo from "../components/ArtifactVideo";
 import {
   rotate,
-  UpDown, 
-  UpDownWide, 
+  UpDown,
+  UpDownWide,
   waveAnimation
 } from "../styles/animations";
 import { hidden } from "../styles/utils";
 import { colors } from "../../tailwind";
+
 import one from "../images/one.svg";
+import two from "../images/two.svg";
+import three from "../images/three.svg";
+import four from "../images/four.svg";
+
 import youcannotsit from "../images/you-cannot-sit.png";
 import "../styles/global";
 import {
@@ -30,6 +35,8 @@ import {
   Inner,
   ArtifactContainer,
   BigTitle,
+  HeaderNav,
+  NavImg,
   Title,
   Subtitle,
   WaveWrapper,
@@ -42,37 +49,163 @@ import {
 //Color Pallet - PINK PANTHER BY JEFF KOONS
 const colorPrimary = "#A26775";
 const colorSecondary = "#D6AABE";
-const colorsArtifact = ["#B69F7F","#76A9A2"];
+const colorsArtifact = ["#B69F7F", "#76A9A2"];
 const Index = () => (
   <React.Fragment>
     <SEO />
     <Parallax pages={6.2}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
-          <SVG icon="dress" className={hidden} width={48} stroke={colors.orange} left="10%" top="20%" />
-          <SVG icon="boot" width={48} stroke={colors.red} left="60%" top="70%" />
-          <SVG icon="shorts" width={6} fill={colors['grey-darker']} left="60%" top="15%" />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={48}
+            stroke={colors.orange}
+            left="10%"
+            top="20%"
+          />
+          <SVG
+            icon="boot"
+            width={48}
+            stroke={colors.red}
+            left="60%"
+            top="70%"
+          />
+          <SVG
+            icon="shorts"
+            width={6}
+            fill={colors["grey-darker"]}
+            left="60%"
+            top="15%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="dressShirt" className={hidden} width={16} fill={colors['blue-dark']} left="80%" top="10%" />
-          <SVG icon="dress" width={12} stroke={colors.white} left="90%" top="50%" />
-          <SVG icon="shirt" width={16} fill={colors['grey-darker']} left="70%" top="90%" />
-          <SVG icon="dress" width={16} stroke={colors['grey-darkest']} left="30%" top="65%" />
-          <SVG icon="shirt" width={6} fill={colors['grey-darkest']} left="75%" top="10%" />
-          <SVG icon="coat" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          <SVG
+            icon="dressShirt"
+            className={hidden}
+            width={16}
+            fill={colors["blue-dark"]}
+            left="80%"
+            top="10%"
+          />
+          <SVG
+            icon="dress"
+            width={12}
+            stroke={colors.white}
+            left="90%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={16}
+            fill={colors["grey-darker"]}
+            left="70%"
+            top="90%"
+          />
+          <SVG
+            icon="dress"
+            width={16}
+            stroke={colors["grey-darkest"]}
+            left="30%"
+            top="65%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colors["grey-darkest"]}
+            left="75%"
+            top="10%"
+          />
+          <SVG
+            icon="coat"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" className={hidden} width={24} fill={colors['grey-darker']} left="5%" top="70%" />
-        <SVG icon="shirt" width={6} fill={colors['grey-darkest']} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colors['grey-darkest']} left="50%" top="60%" />
-        <SVG icon="coat" width={8} fill={colors['grey-darkest']} left="95%" top="90%" />
-        <SVG icon="coat" className={hidden} width={24} fill={colors['grey-darker']} left="40%" top="80%" />
-        <SVG icon="dress" width={8} stroke={colors['grey-darker']} left="25%" top="5%" />
+        <SVG
+          icon="shirt"
+          className={hidden}
+          width={24}
+          fill={colors["grey-darker"]}
+          left="5%"
+          top="70%"
+        />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colors["grey-darkest"]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="50%"
+          top="60%"
+        />
+        <SVG
+          icon="coat"
+          width={8}
+          fill={colors["grey-darkest"]}
+          left="95%"
+          top="90%"
+        />
+        <SVG
+          icon="coat"
+          className={hidden}
+          width={24}
+          fill={colors["grey-darker"]}
+          left="40%"
+          top="80%"
+        />
+        <SVG
+          icon="dress"
+          width={8}
+          stroke={colors["grey-darker"]}
+          left="25%"
+          top="5%"
+        />
         <SVG icon="shirt" width={64} fill={colors.green} left="95%" top="5%" />
-        <SVG icon="shorts" className={hidden} width={64} fill={colors.purple} left="5%" top="90%" />
-        <SVG icon="shorts" width={6} fill={colors['grey-darkest']} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colors['grey-darkest']} left="40%" top="30%" />
-        <SVG icon="boot" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />
-        <SVG icon="boot" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />
+        <SVG
+          icon="shorts"
+          className={hidden}
+          width={64}
+          fill={colors.purple}
+          left="5%"
+          top="90%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colors["grey-darkest"]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="40%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={16}
+          stroke={colors["grey-darker"]}
+          left="10%"
+          top="50%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          stroke={colors["grey-darker"]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={0}>
         <Inner>
@@ -84,28 +217,145 @@ const Index = () => (
       </Content>
       <Divider speed={0.1} offset={1} factor={1}>
         <UpDown>
-          <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="85%" top="75%" />
-          <SVG icon="dress" width={8} fill={colorsArtifact[0]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
-          <SVG icon="shirt" className={hidden} width={24} fill={colorsArtifact[0]} left="17%" top="60%" />
+          <SVG
+            icon="shorts"
+            width={6}
+            fill={colorsArtifact[0]}
+            left="85%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            width={8}
+            fill={colorsArtifact[0]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[1]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[0]}
+            left="17%"
+            top="60%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="20%" top="90%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="90%" top="30%" />
-          <SVG icon="shirt" width={16} fill={colorsArtifact[0]} left="70%" top="90%" />
-          <SVG icon="dressShirt" className={hidden} width={16} fill={colorsArtifact[1]} left="18%" top="75%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="75%" top="10%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[0]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[0]}
+            left="20%"
+            top="90%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="90%"
+            top="30%"
+          />
+          <SVG
+            icon="shirt"
+            width={16}
+            fill={colorsArtifact[0]}
+            left="70%"
+            top="90%"
+          />
+          <SVG
+            icon="dressShirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[1]}
+            left="18%"
+            top="75%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[0]}
+            left="75%"
+            top="10%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[0]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[0]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="80%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[0]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="29%" top="26%" />
-        <SVG icon="boot" width={16} fill={colorsArtifact[1]} left="75%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[0]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="80%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[0]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="29%"
+          top="26%"
+        />
+        <SVG
+          icon="boot"
+          width={16}
+          fill={colorsArtifact[1]}
+          left="75%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={1} factor={1}>
         <Inner>
+          <HeaderNav>
+            <Link to="/">
+              <NavImg src={one} alt="I" />
+            </Link>
+            ー
+            <Link to="/pagetwo/">
+              <NavImg src={two} alt="II" />
+            </Link>
+            ー
+            <Link to="/pagethree/">
+              <NavImg src={three} alt="III" />
+            </Link>
+            ー
+            <Link to="/pagefour/">
+              <NavImg src={four} alt="IV" />
+            </Link>
+          </HeaderNav>
           <NumImg src={one} alt="I" />
           <BigTitle>THE FORCES OF FASHION</BigTitle>
           <Subtitle>
@@ -128,22 +378,105 @@ const Index = () => (
       />
       <Divider speed={0.1} offset={2.3}>
         <UpDown>
-          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[0]} left="50%" top="75%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[0]} left="25%" top="5%" />
-          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+          <SVG
+            icon="shorts"
+            className={hidden}
+            width={6}
+            fill={colorsArtifact[0]}
+            left="50%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[0]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[1]}
+            left="80%"
+            top="80%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[0]} left="5%" top="80%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[0]}
+            left="5%"
+            top="80%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[1]}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[0]} left="70%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[0]} left="20%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[0]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={2.3}>
         <Inner>
@@ -179,23 +512,67 @@ const Index = () => (
       </Content>
       <Divider speed={0.1} offset={4.2}>
         <UpDown>
-          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} stroke={colorSecondary} left="25%" top="5%" />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorPrimary}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            stroke={colorSecondary}
+            left="25%"
+            top="5%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="dressShirt" width={12} stroke={colorSecondary} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorPrimary} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorPrimary} left="45%" top="10%" />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            stroke={colorSecondary}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorPrimary}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorPrimary}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
         <SVG icon="shirt" width={6} fill={colorPrimary} left="4%" top="20%" />
         <SVG icon="shirt" width={12} fill={colorPrimary} left="70%" top="60%" />
-        <SVG icon="shorts" width={12} fill={colorPrimary} left="20%" top="30%" />
-        <SVG icon="boot" width={8} stroke={colorSecondary} left="80%" top="70%" />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorPrimary}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          stroke={colorSecondary}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={4}>
         <Inner>
           <Title>Fashion Journalism and Trendsetting</Title>
-          <BigImage height="50%" width="50%" src={youcannotsit} />
+          <BigImage height="40%" width="40%" src={youcannotsit} />
           <SupplementaryInfo color={colorsArtifact[1]}>
             <i>
               "One of the differences between art and fashion is that, though it
@@ -240,40 +617,120 @@ const Index = () => (
       </Content>
       <Divider speed={0.1} offset={5.3}>
         <UpDown>
-          <SVG icon="shorts" className={hidden} width={6} fill={colorsArtifact[1]} left="50%" top="75%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="70%" top="20%" />
-          <SVG icon="dressShirt" width={8} fill={colorsArtifact[1]} left="25%" top="5%" />
-          <SVG icon="dress" className={hidden} width={24} fill={colorsArtifact[1]} left="80%" top="80%" />
+          <SVG
+            icon="shorts"
+            className={hidden}
+            width={6}
+            fill={colorsArtifact[1]}
+            left="50%"
+            top="75%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={8}
+            fill={colorsArtifact[1]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={24}
+            fill={colorsArtifact[1]}
+            left="80%"
+            top="80%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="shirt" className={hidden} width={16} fill={colorsArtifact[1]} left="5%" top="80%" />
-          <SVG icon="dressShirt" width={12} fill={colorsArtifact[1]} left="95%" top="50%" />
-          <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="85%" top="15%" />
-          <SVG icon="dress" className={hidden} width={8} fill={colorsArtifact[1]} left="45%" top="10%" />
+          <SVG
+            icon="shirt"
+            className={hidden}
+            width={16}
+            fill={colorsArtifact[1]}
+            left="5%"
+            top="80%"
+          />
+          <SVG
+            icon="dressShirt"
+            width={12}
+            fill={colorsArtifact[1]}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="shirt"
+            width={6}
+            fill={colorsArtifact[1]}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="dress"
+            className={hidden}
+            width={8}
+            fill={colorsArtifact[1]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="shirt" width={6} fill={colorsArtifact[1]} left="4%" top="20%" />
-        <SVG icon="shirt" width={12} fill={colorsArtifact[1]} left="70%" top="60%" />
-        <SVG icon="shorts" width={6} fill={colorsArtifact[1]} left="10%" top="10%" />
-        <SVG icon="shorts" width={12} fill={colorsArtifact[1]} left="20%" top="30%" />
-        <SVG icon="boot" width={8} fill={colorsArtifact[1]} left="80%" top="70%" />
+        <SVG
+          icon="shirt"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="shirt"
+          width={12}
+          fill={colorsArtifact[1]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="shorts"
+          width={6}
+          fill={colorsArtifact[1]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="shorts"
+          width={12}
+          fill={colorsArtifact[1]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="boot"
+          width={8}
+          fill={colorsArtifact[1]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={5.3}>
         <Inner>
           <Title>Trends and Overconsumption</Title>
           <SupplementaryInfo color={colorPrimary}>
             Understanding how fashion trends play a role in our lives is an
-            important part of reducing our overall consumption. But why is
-            this such an important topic?
+            important part of reducing our overall consumption. But why is this
+            such an important topic?
           </SupplementaryInfo>
         </Inner>
       </Content>
       <Content speed={0.4} offset={5.6}>
-
-        <Link
-          to="/pagetwo/"
-        ><NavButton color={colorPrimary}>
-            Next Page >
-          </NavButton></Link>
+        <Link to="/pagetwo/">
+          <NavButton color={colorPrimary}>Next Page ></NavButton>
+        </Link>
         <Footer>
           &copy; 2018 by Victor Perez{" "}
           <a href="https://github.com/victorjperez/fashionandoverconsumption">
