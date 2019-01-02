@@ -62,7 +62,7 @@ const colorsArtifact = ["#43362A", "#A88B4C"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={7.2}>
+    <Parallax pages={5}>
       <Divider speed={0.1} offset={0} factor={1}>
         <UpDown>
           <SVG
@@ -185,7 +185,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={0.1} factor={1}>
+      <Content speed={0.4} offset={0} factor={1}>
         <Inner>
           <NumImg src={four} alt="IV" />
           <HeaderNav>
@@ -320,9 +320,9 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={2}>
+      <Content speed={0.4} offset={1} factor={2}>
         <Inner>
-          <Title>The Easiest Option: Buy Less Clothes</Title>
+          <Title>The Easiest Option: Buy Less Clothing</Title>
           <SupplementaryInfo color={colorsArtifact[0]}>
             There are many different ways that you can make an impact as a
             consumer, but one thing matters the most above all else: buying less
@@ -437,7 +437,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={4.5}>
+      <Content speed={0.4} offset={2} factor={3.9}>
         <Inner>
           <Title>Repairing and Refurbishing</Title>
           <SupplementaryInfo color={colorsArtifact[1]}>
@@ -590,7 +590,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={6}>
+      <Content speed={0.4} offset={3} factor={3.9}>
         <Inner>
           <Title>Closing Remarks: The Future of Fashion</Title>
           <SupplementaryInfo color={colorPrimary}>
@@ -613,7 +613,7 @@ const Index = () => (
           </ArtifactContainer>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={6.6}>
+      <Content speed={0.4} offset={4} factor={1.5}> 
         <Footer>
           &copy; 2018 by Victor Perez{" "}
           <a href="https://github.com/victorjperez/fashionandoverconsumption">
@@ -622,7 +622,7 @@ const Index = () => (
           .
         </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={6.3}>
+      <Divider fill={colorSecondary} speed={0.2} offset={4}>
         <WaveWrapper>
           <InnerWave>
             <svg

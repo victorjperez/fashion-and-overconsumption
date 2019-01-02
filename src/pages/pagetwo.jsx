@@ -53,7 +53,7 @@ const colorsArtifact = ["#202938", "#1D2025"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={5.75}>
+    <Parallax pages={5}>
       <Divider speed={0.1} offset={0} factor={1}>
         <UpDown>
           <SVG
@@ -312,7 +312,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={1.8}>
+      <Content speed={0.4} offset={1} factor={2.3}>
         <Inner>
           <Title>The Denim Manufacturing Process (At a Glance)</Title>
           <SupplementaryInfo color={colorsArtifact[0]}>
@@ -428,7 +428,7 @@ const Index = () => (
         />
       </Divider>
 
-      <Content speed={0.4} offset={3.9}>
+      <Content speed={0.4} offset={2} factor={4}>
         <Inner>
           <Title>The Finanical Cost of Clothing</Title>
           <SupplementaryInfo color={colorsArtifact[1]}>
@@ -466,7 +466,7 @@ const Index = () => (
           </ArtifactContainer>
         </Inner>
       </Content>
-      <Divider speed={0.1} offset={4.95}>
+      <Divider speed={0.1} offset={4}>
         <UpDown>
           <SVG
             icon="shorts"
@@ -568,7 +568,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={4.95}>
+      <Content speed={0.4} offset={3} factor={3.5}> 
         <Inner>
           <Title>How Are Clothes So Affordable?</Title>
           <SupplementaryInfo color={colorPrimary}>
@@ -578,7 +578,7 @@ const Index = () => (
           </SupplementaryInfo>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={5}>
+      <Content speed={0.4} offset={4.3}>
         <Link to="/pagethree/">
           <NavButton color={colorPrimary}>Next Page ></NavButton>
         </Link>
@@ -590,7 +590,7 @@ const Index = () => (
           .
         </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={4.9}>
+      <Divider fill={colorSecondary} speed={0.2} offset={4}>
         <WaveWrapper>
           <InnerWave>
             <svg

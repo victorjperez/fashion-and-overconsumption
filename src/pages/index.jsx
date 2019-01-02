@@ -53,7 +53,7 @@ const colorsArtifact = ["#B69F7F", "#76A9A2"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={6.2}>
+    <Parallax pages={6}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
           <SVG
@@ -207,7 +207,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={0}>
+      <Content speed={0.4} offset={0} factor={1.5}>
         <Inner>
           <BigTitle>FASHION & OVERCONSUMPTION</BigTitle>
           <Subtitle>
@@ -337,7 +337,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={1} factor={1}>
+      <Content speed={0.4} offset={1} factor={1.5}>
         <Inner>
           <NumImg src={one} alt="I" />
           <HeaderNav>
@@ -478,7 +478,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={2.3}>
+      <Content speed={0.4} offset={2} factor={2}>
         <Inner>
           <Title>Trends and The Fashion Cycle</Title>
           <ArtifactVideo
@@ -567,7 +567,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={4}>
+      <Content speed={0.4} offset={3} factor={2.7}>
         <Inner>
           <Title>Fashion Journalism and Trendsetting</Title>
           <BigImage height="40%" width="40%" src={youcannotsit} />
@@ -715,7 +715,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={5.3}>
+      <Content speed={0.4} offset={5} factor={0.05}>
         <Inner>
           <Title>Trends and Overconsumption</Title>
           <SupplementaryInfo color={colorPrimary}>
@@ -725,7 +725,7 @@ const Index = () => (
           </SupplementaryInfo>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={5.6}>
+      <Content speed={0.4} offset={5.3}>
         <Link to="/pagetwo/">
           <NavButton color={colorPrimary}>Next Page ></NavButton>
         </Link>
@@ -737,7 +737,7 @@ const Index = () => (
           .
         </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={5.25}>
+      <Divider fill={colorSecondary} speed={0.2} offset={5}>
         <WaveWrapper>
           <InnerWave>
             <svg

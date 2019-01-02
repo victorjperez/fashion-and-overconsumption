@@ -55,7 +55,7 @@ const colorsArtifact = ["#8C9355", "#465946"];
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={6.5}>
+    <Parallax pages={5}>
       <Divider speed={0.1} offset={0} factor={1}>
         <UpDown>
           <SVG
@@ -313,7 +313,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={1.5}>
+      <Content speed={0.4} offset={1} factor={1.8}>
         <Inner>
           <Title>The Corruption of The Fashion Cycle</Title>
           <SupplementaryInfo color={colorsArtifact[0]}>
@@ -433,7 +433,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={3.7}>
+      <Content speed={0.4} offset={2} factor={3.3}>
         <Inner>
           <Title>Fashion: the Great Polluter</Title>
           <SupplementaryInfo color={colorsArtifact[1]}>
@@ -575,7 +575,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={5}>
+      <Content speed={0.4} offset={3} factor={3.3}>
         <Inner>
           <Title>The Ruthless Exploitation of Labor</Title>
           <SupplementaryInfo color={colorPrimary}>
@@ -596,12 +596,19 @@ const Index = () => (
           </ArtifactNoMedia>
         </Inner>
       </Content>
-      <Content speed={0.4} offset={6} factor={0.05}>
+      <Content speed={0.4} offset={4} factor={1.5}>
         <Link to="/pagefour/">
           <NavButton color={colorPrimary}>Next Page ></NavButton>
         </Link>
+        <Footer>
+          &copy; 2018 by Victor Perez{" "}
+          <a href="https://github.com/victorjperez/fashionandoverconsumption">
+            Github Repository
+          </a>
+          .
+        </Footer>
       </Content>
-      <Divider fill={colorSecondary} speed={0.2} offset={5.6}>
+      <Divider fill={colorSecondary} speed={0.2} offset={4}>
         <WaveWrapper>
           <InnerWave>
             <svg
